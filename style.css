@@ -1,0 +1,35 @@
+:root {
+    /* MUTUAL */
+    --c-blue: #0079FF;
+
+    /* LIGHT */
+    --c-blue-gray-l: #697C9A;
+    --c-blue-dark-l: #4B6A9B;
+    --c-blue-darkest-l: #2B3442;
+    --c-blue-lightest-l: #F6F8FF;
+    --c-gray-lightest-l: #FEFEFE;
+
+    /* DARK */
+    --c-white-d: #FFFFFF;
+    --c-blue-darkest-d: #141D2F;
+    --c-blue-dark-d: #1E2A47;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: content-box;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: 'Space Mono', monospace;
+    min-height: 100vh;
+}
