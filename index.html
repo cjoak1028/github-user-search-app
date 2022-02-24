@@ -25,14 +25,14 @@
   </head>
   <body>
     <div class="container">
-      <header class="header mb-lg">
+      <header class="header">
         <h1 class="heading-1 logo">devfinder</h1>
         <button class="mode-toggle">
           <h4 class="heading-4 mode-toggle__title">Dark</h4>
         </button>
       </header>
       <main class="main">
-        <div class="search-group">
+        <div class="form-group u-rounded">
           <img
             src="./assets/icon-search.svg"
             alt="search icon"
@@ -40,10 +40,46 @@
           />
           <input
             type="search"
-            class="search-control"
-            placeholder="Search GitHub username..."
+            class="form-control"
+            placeholder="Search GitHub username&hellip;"
           />
           <button type="button" class="btn btn--search">Search</button>
+        </div>
+        <div class="profile-container u-rounded">
+          <div class="user-profile">
+            <div class="user-profile__photo"></div>
+            <div class="user-profile__summary">
+              <h3 class="user-name heading-3">The Octocat</h3>
+              <h4 class="user-id heading-4">@octocat</h4>
+              <h4 class="user-date-joined heading-4">Joined 25 Jan 2011</h4>
+            </div>
+          </div>
+          <p class="user-description">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
+            odio. Quisque volutpat mattis eros.
+          </p>
+          <div class="user-stats">
+            <div class="user-stat">
+              <h4 class="stat-label">Repos</h4>
+              <p class="stat-data">8</p>
+            </div>
+            <div class="user-stat">
+              <h4 class="stat-label">Followers</h4>
+              <p class="stat-data">3938</p>
+            </div>
+            <div class="user-stat">
+              <h4 class="stat-label">Following</h4>
+              <p class="stat-data">9</p>
+            </div>
+          </div>
+          <!-- <div class="user-details">
+            <ul class="details-list">
+              <li class="list-item location">San Francisco</li>
+              <li class="website">https://github.blog</li>
+              <li class="twitter">Not Available</li>
+              <li class="company">@github</li>
+            </ul>
+          </div> -->
         </div>
       </main>
     </div>

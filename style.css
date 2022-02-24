@@ -29,15 +29,20 @@ html {
     padding: 0;
     box-sizing: inherit;
     font-family: 'Space Mono', monospace;
+    font-size: inherit;
 }
 
 body {
     overflow: inherit;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
     line-height: 2.5rem;
     min-height: 100vh;
     background-color: var(--c-blue-lightest-l);
+}
+
+ul {
+    list-style: none;
 }
 
 /*LAYOUT*/
@@ -52,8 +57,16 @@ body {
 }
 
 /*UTILITIES*/
-.mb-lg {
+.u-rounded {
+    border-radius: 1.5rem;
+}
+
+.u-mb-lg {
     margin-bottom: 3.6rem;
+}
+
+.u-mb-sm {
+    margin-bottom: 1.6rem;
 }
 
 /*TYPOGRAPHY*/
@@ -90,6 +103,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 3.6rem;
 }
 
 .logo {
@@ -118,14 +132,14 @@ body {
 }
 
 /*SEARCH-BAR*/
-.search-group {
+.form-group {
     display: flex;
     align-items: center;
     width: 100%;
     background-color: var(--c-gray-lightest-l);
-    border-radius: 1.5rem;
     padding: .7rem;
     box-shadow: 0 1.6rem 3rem -1rem rgba(70, 96, 187, 0.2);
+    margin-bottom: 1.6rem;
 }
 
 .search-icon {
@@ -134,15 +148,13 @@ body {
     margin: 0 .9rem;
 }
 
-.search-control {
+.form-control {
     flex: 1;
     border: none;
-    font-size: 1.3rem;
     font-weight: 400;
-    margin-right: .9rem;
 }
 
-.search-control:focus {
+.form-control:focus {
     outline: none;
 }
 
@@ -157,4 +169,87 @@ body {
     background-color: var(--c-blue);
     color: var(--c-white);
     width: 8.4rem;
+}
+
+/*USER PROFILE*/
+.profile-container {
+    background-color: var(--c-gray-lightest-l);
+    padding: 3.2rem 2.4rem 4.8rem;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3.3rem;
+}
+
+.user-profile__photo {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    /*test*/
+    background-color: var(--c-blue-lightest-l);
+    /******/
+    margin-right: 1.9rem;
+}
+
+.user-name {
+    font-weight: 700;
+    color: var(--c-blue-darkest-l);
+}
+
+.user-id {
+    color: var(--c-blue);
+    margin-bottom: .6rem;
+}
+
+.user-date-joined {
+    color: var(--c-blue-gray-l);
+}
+
+.user-description {
+    color: var(--c-blue-dark-l);
+    margin-bottom: 2.3rem;
+}
+
+/*USER STATS*/
+.user-stats {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--c-blue-lightest-l);
+    border-radius: 1rem;
+    padding: 1.8rem 3.8rem;
+}
+
+.user-stat {
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--c-blue-dark-l);
+}
+
+.stat-data {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--c-blue-darkest-l);
+}
+
+/*USER DETAILS*/
+.location::before {
+    content: url('./assets/icon-location.svg');
+}
+
+.website::before {
+    content: url('./assets/icon-website.svg');
+}
+
+.twitter::before {
+    content: url('./assets/icon-twitter.svg');
+}
+
+.company::before {
+    content: url('./assets/icon-company.svg');
 }
