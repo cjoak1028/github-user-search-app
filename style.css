@@ -10,15 +10,16 @@
     --c-gray-lightest-l: #FEFEFE;
 
     /* DARK */
-    --c-white-d: #FFFFFF;
+    --c-white: #FFFFFF;
     --c-blue-darkest-d: #141D2F;
     --c-blue-dark-d: #1E2A47;
 }
 
+/*DEFAULT*/
 html {
     overflow: auto;
     font-size: 62.5%;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 *,
@@ -36,6 +37,23 @@ body {
     font-weight: 400;
     line-height: 2.5rem;
     min-height: 100vh;
+    background-color: var(--c-blue-lightest-l);
+}
+
+/*LAYOUT*/
+.container {
+    display: block;
+    margin: 3.1rem 2.4rem 0;
+}
+
+.main {
+    display: block;
+    width: 100%;
+}
+
+/*UTILITIES*/
+.mb-lg {
+    margin-bottom: 3.6rem;
 }
 
 /*TYPOGRAPHY*/
@@ -67,12 +85,7 @@ body {
     font-weight: 400;
 }
 
-
-.container {
-    display: block;
-    margin: 3.1rem 2.4rem 0;
-}
-
+/*HEADER*/
 .header {
     display: flex;
     justify-content: space-between;
@@ -102,4 +115,41 @@ body {
 
 .mode-toggle::after {
     content: url('./assets/icon-moon.svg');
+}
+
+/*SEARCH-BAR*/
+.search-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--c-gray-lightest-l);
+    border-radius: 1.5rem;
+    padding: .7rem;
+    box-shadow: 0 1.6rem 3rem -1rem rgba(70, 96, 187, 0.2);
+}
+
+.search-icon {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 .9rem;
+}
+
+.search-control {
+    flex: 1;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.btn {
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    padding: 1.25rem 0;
+}
+
+.btn--search {
+    background-color: var(--c-blue);
+    color: var(--c-white);
+    width: 8.4rem;
 }
