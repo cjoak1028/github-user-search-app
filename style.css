@@ -139,6 +139,11 @@ body {
     border: none;
     font-size: 1.3rem;
     font-weight: 400;
+    margin-right: .9rem;
+}
+
+.search-control:focus {
+    outline: none;
 }
 
 .btn {
