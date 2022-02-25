@@ -219,6 +219,7 @@ ul {
     background-color: var(--c-blue-lightest-l);
     border-radius: 1rem;
     padding: 1.8rem 3.8rem;
+    margin-bottom: 2.4rem;
 }
 
 .user-stat {
@@ -238,18 +239,23 @@ ul {
 }
 
 /*USER DETAILS*/
-.location::before {
-    content: url('./assets/icon-location.svg');
+.grid-items {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 1.6rem;
+    color: var(--c-blue-dark-l);
 }
 
-.website::before {
-    content: url('./assets/icon-website.svg');
+.grid-item {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    grid-column-gap: 1.3rem;
 }
 
-.twitter::before {
-    content: url('./assets/icon-twitter.svg');
+.icon {
+    align-self: center;
 }
 
-.company::before {
-    content: url('./assets/icon-company.svg');
+.not-available {
+    opacity: 50%;
 }
