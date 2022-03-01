@@ -103,7 +103,7 @@ h3, h4 {
 .mode-toggle {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     background: none;
     border: none;
     cursor: pointer;
@@ -119,6 +119,14 @@ h3, h4 {
 
 .mode-toggle::after {
     content: url('./assets/icon-moon.svg');
+}
+
+.mode-toggle:hover .mode-toggle__title {
+    color: black;
+}
+
+.mode-toggle:hover:after {
+    content: url('./assets/icon-moon-hover.svg');
 }
 
 /*SEARCH-BAR*/
@@ -160,6 +168,11 @@ h3, h4 {
     background-color: var(--c-blue);
     color: var(--c-white);
     width: 8.4rem;
+}
+
+.btn--search:hover {
+    cursor: pointer;
+    background-color: #60ABFF;
 }
 
 /*USER PROFILE*/
