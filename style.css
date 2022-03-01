@@ -48,7 +48,7 @@ ul {
 /*LAYOUT*/
 .container {
     display: block;
-    margin: 3.1rem auto 0;
+    margin: 3.1rem auto;
     padding: 0 2.4rem;
     max-width: 73rem;
 }
@@ -353,7 +353,7 @@ h3, h4 {
     }
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 60em) {
     .container {
         max-width: 73rem;
     }
@@ -364,5 +364,13 @@ h3, h4 {
 
     .user-profile__text {
         column-gap: 10rem;
+    }
+
+    .user-profile>*:not(:first-child) {
+        margin-left: 15.8rem;
+    }
+
+    .user-description {
+        margin-top: -3rem;
     }
 }
