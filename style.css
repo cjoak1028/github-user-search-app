@@ -173,13 +173,13 @@ h3, h4 {
 .user-profile {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }
 
 .user-profile__summary {
     display: flex;
     align-items: center;
-    gap: 1.9rem;
+    column-gap: 1.9rem;
+    line-height: 2.1rem;
 }
 
 .user-profile__text {
@@ -187,6 +187,8 @@ h3, h4 {
     flex: 1;
     flex-wrap: wrap;
     justify-content: space-between;
+    row-gap: .9rem;
+    column-gap: 19rem;
 }
 
 .user-profile__photo {
@@ -206,7 +208,6 @@ h3, h4 {
 
 .user-id {
     color: var(--c-blue);
-    margin-bottom: .5rem;
 }
 
 .user-date-joined {
@@ -215,6 +216,7 @@ h3, h4 {
 
 .user-description {
     color: var(--c-blue-dark-l);
+    margin-top: 3.3rem;
 }
 
 /*USER STATS*/
@@ -222,6 +224,7 @@ h3, h4 {
     background-color: var(--c-blue-lightest-l);
     border-radius: 1rem;
     padding: 1.8rem 3.8rem;
+    margin-top: 2.3rem;
 }
 
 .user-stats {
@@ -253,6 +256,7 @@ h3, h4 {
     grid-row-gap: 1.6rem;
     color: var(--c-blue-dark-l);
     max-width: 43rem;
+    margin-top: 2.4rem;
 }
 
 .grid-item {
@@ -267,4 +271,17 @@ h3, h4 {
 
 .not-available {
     opacity: 50%;
+}
+
+@media only screen and (min-width: 36em) {
+    .container {
+        max-width: 57.3rem;
+        margin-top: 14rem;
+        margin-bottom: 14rem;
+    }
+
+    .grid-items {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 }
