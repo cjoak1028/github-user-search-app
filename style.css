@@ -117,17 +117,21 @@ h3, h4 {
     letter-spacing: .25rem;
 }
 
-.mode-toggle::after {
+/* .mode-toggle::after {
     content: url('./assets/icon-moon.svg');
-}
+} */
 
 .mode-toggle:hover .mode-toggle__title {
     color: black;
 }
 
-.mode-toggle:hover:after {
-    content: url('./assets/icon-moon-hover.svg');
+.mode-toggle:hover>img {
+    fill: black;
 }
+
+/* .mode-toggle:hover:after {
+    content: url('./assets/icon-moon-hover.svg');
+} */
 
 /*SEARCH-BAR*/
 .form-group {
@@ -155,6 +159,10 @@ h3, h4 {
 
 .form-control:focus {
     outline: none;
+}
+
+.form-control::placeholder {
+    color: var(--c-blue-dark-l);
 }
 
 .btn {
@@ -386,4 +394,25 @@ h3, h4 {
     .user-description {
         margin-top: -3rem;
     }
+}
+
+/*DARK-MODE STYLING*/
+.dark-mode,
+.dark-mode .user-stats-wrapper {
+    background-color: var(--c-blue-darkest-d);
+}
+
+.dark-mode .form-group,
+.dark-mode .form-control,
+.dark-mode .profile-container {
+    background-color: var(--c-blue-dark-d);
+}
+
+.dark-mode *:not(.user-id),
+.dark-mode ::placeholder {
+    color: var(--c-white);
+}
+
+.dark-mode .mode-toggle:hover .mode-toggle__title {
+    color: #90A4D4;
 }
