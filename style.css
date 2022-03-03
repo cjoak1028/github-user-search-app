@@ -107,7 +107,7 @@ h3, h4 {
     background: none;
     border: none;
     cursor: pointer;
-    width: 7.8rem;
+    /* width: 7.8rem; */
 }
 
 .mode-toggle__title {
@@ -115,6 +115,7 @@ h3, h4 {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .25rem;
+    margin-right: 1.6rem;
 }
 
 /* .mode-toggle::after {
@@ -125,8 +126,8 @@ h3, h4 {
     color: black;
 }
 
-.mode-toggle:hover>img {
-    fill: black;
+.icon-dark {
+    display: none;
 }
 
 /* .mode-toggle:hover:after {
@@ -397,6 +398,14 @@ h3, h4 {
 }
 
 /*DARK-MODE STYLING*/
+.dark-mode .icon-light {
+    display: none;
+}
+
+.dark-mode .icon-dark {
+    display: block;
+}
+
 .dark-mode,
 .dark-mode .user-stats-wrapper {
     background-color: var(--c-blue-darkest-d);
