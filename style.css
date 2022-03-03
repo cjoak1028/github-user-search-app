@@ -126,7 +126,11 @@ h3, h4 {
     color: black;
 }
 
-.icon-dark {
+.mode-toggle:hover .icon-moon>path {
+    fill: black;
+}
+
+.icon-sun {
     display: none;
 }
 
@@ -378,6 +382,7 @@ h3, h4 {
         grid-template-rows: 1fr 1fr;
         grid-auto-flow: column;
         font-size: 1.5rem;
+        column-gap: 6.5rem;
     }
 }
 
@@ -404,12 +409,16 @@ h3, h4 {
 }
 
 /*DARK-MODE STYLING*/
-.dark-mode .icon-light {
+.dark-mode .icon-moon {
     display: none;
 }
 
-.dark-mode .icon-dark {
+.dark-mode .icon-sun {
     display: block;
+}
+
+.mode-toggle:hover .icon-sun>g {
+    fill: #90A4D4;
 }
 
 .dark-mode,
