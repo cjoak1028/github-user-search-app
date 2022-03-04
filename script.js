@@ -3,6 +3,8 @@
 import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
 const octokit = new Octokit({ auth: config.MY_API_TOKEN });
 
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
 const bodyElem = document.body;
 const toggleButton = document.querySelector('.mode-toggle');
 const toggleButtonLabel = document.querySelector('.mode-toggle__title');
@@ -12,6 +14,8 @@ const searchInput = document.querySelector('.form-control');
 // const userPhoto = document.querySelector('.user-profile__photo img');
 const userName = document.querySelector('.user-name');
 const userId = document.querySelector('.user-id');
+const dateJoined = document.querySelector('.user-date-joined');
+
 const userBio = document.querySelector('.user-bio');
 
 const repos = document.querySelector('.repos .stat-data');
@@ -38,7 +42,15 @@ const updateProfile = (data) => {
     // userPhoto.src = data.avatar_url;
     userName.innerHTML = data.name || data.login;
     userId.innerHTML = `@${data.login}`;
-    // userBio.innerHTML = data.bio || 'This profile has no bio';
+
+    const day = data.created_at.substring(8, 10);
+    const month = MONTHS[parseInt(data.created_at.substring(5, 7)) - 1];
+    const year = data.created_at.substring(0, 4);
+
+    dateJoined.querySelector('.day').innerHTML = day;
+    dateJoined.querySelector('.month').innerHTML = month;
+    dateJoined.querySelector('.year').innerHTML = year;
+
     if (!data.bio) {
         userBio.innerHTML = 'This profile has no bio';
         userBio.classList.add('not-available');

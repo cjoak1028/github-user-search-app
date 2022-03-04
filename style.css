@@ -170,6 +170,29 @@ h3, h4 {
     color: var(--c-blue-dark-l);
 }
 
+/* SRC: https://blog.maximerouiller.com/post/remove-the-x-from-internet-explorer-and-chrome-input-type-search/ */
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+
 .btn {
     border: none;
     border-radius: 1rem;
@@ -281,11 +304,13 @@ h3, h4 {
 /*USER DETAILS*/
 .grid-items {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
     grid-row-gap: 1.6rem;
+    grid-auto-rows: min-content;
     color: var(--c-blue-dark-l);
     max-width: 43rem;
     margin-top: 2.4rem;
+
 }
 
 .grid-item {
@@ -299,7 +324,7 @@ h3, h4 {
 }
 
 .icon {
-    align-self: center;
+    align-self: start;
 }
 
 .grid-items .not-available {
@@ -408,6 +433,10 @@ h3, h4 {
 
     .user-bio {
         margin-top: -3rem;
+    }
+
+    .user-date-joined {
+        margin-bottom: 6rem;
     }
 }
 
