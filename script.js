@@ -11,7 +11,7 @@ const toggleButtonLabel = document.querySelector('.mode-toggle__title');
 const searchForm = document.querySelector('.form-group');
 const searchInput = document.querySelector('.form-control');
 
-// const userPhoto = document.querySelector('.user-profile__photo img');
+const userPhoto = document.querySelector('.user-profile__photo img');
 const userName = document.querySelector('.user-name');
 const userId = document.querySelector('.user-id');
 const dateJoined = document.querySelector('.user-date-joined');
@@ -39,7 +39,7 @@ const getUserData = async (username) => {
 
 const updateProfile = (data) => {
     console.log(data);
-    // userPhoto.src = data.avatar_url;
+    userPhoto.src = data.avatar_url;
     userName.innerHTML = data.name || data.login;
     userId.innerHTML = `@${data.login}`;
 

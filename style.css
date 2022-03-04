@@ -243,9 +243,12 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
-    /*test*/
-    background-color: var(--c-blue-lightest-l);
-    /******/
+    overflow: hidden;
+}
+
+.user-profile__photo img {
+    width: 100%;
+    object-fit: contain;
 }
 
 .user-wrapper {
