@@ -170,6 +170,14 @@ h3, h4 {
     color: var(--c-blue-dark-l);
 }
 
+.warning {
+    color: red;
+    margin-left: 2rem;
+    margin-right: 2.4rem;
+    font-weight: 700;
+    display: none;
+}
+
 /* SRC: https://blog.maximerouiller.com/post/remove-the-x-from-internet-explorer-and-chrome-input-type-search/ */
 /* clears the 'X' from Internet Explorer */
 input[type=search]::-ms-clear {

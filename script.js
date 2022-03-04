@@ -27,7 +27,15 @@ const website = document.querySelector('.website');
 const twitter = document.querySelector('.twitter');
 const company = document.querySelector('.company');
 
+const warning = document.querySelector('.warning');
 
+const displayError = () => {
+    warning.style.display = "block";
+}
+
+const hideError = () => {
+    warning.style.display = "none";
+}
 
 const getUserData = async (username) => {
     const userData = await octokit.request('GET /users/{username}', {
@@ -94,8 +102,12 @@ const updateProfile = (data) => {
         company.classList.remove('not-available');
         company.querySelector('p').innerHTML = data.company;
     }
-
 }
+
+searchInput.addEventListener('input', () => {
+    console.log('input changed');
+    hideError();
+})
 
 toggleButton.addEventListener('click', () => {
     bodyElem.classList.toggle('dark-mode');
@@ -120,6 +132,7 @@ searchForm.addEventListener('submit', (e) => {
         })
         .catch((err) => {
             console.error(err);
+            displayError();
         });
 });
 
