@@ -243,7 +243,7 @@ h3, h4 {
     color: var(--c-blue-gray-l);
 }
 
-.user-description {
+.user-bio {
     color: var(--c-blue-dark-l);
     margin-top: 3.3rem;
 }
@@ -302,8 +302,12 @@ h3, h4 {
     align-self: center;
 }
 
-.not-available {
+.grid-items .not-available {
     opacity: 50%;
+}
+
+.user-profile .not-available {
+    opacity: 75%;
 }
 
 @media only screen and (min-width: 36em) {
@@ -360,7 +364,7 @@ h3, h4 {
         font-size: 1.5rem;
     }
 
-    .user-description {
+    .user-bio {
         font-size: 1.5rem;
     }
 
@@ -402,7 +406,7 @@ h3, h4 {
         margin-left: 15.8rem;
     }
 
-    .user-description {
+    .user-bio {
         margin-top: -3rem;
     }
 }
