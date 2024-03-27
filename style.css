@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* COLOR SCHEMES */
+.theme-light {
+    --c-bg: #F6F8FF;
+    --c-primary: #0079FF;
+    --c-onPrimary: #FFFFFF;
+    --c-container: #FEFEFE;
+    --c-text-primary: #2B3442;
+    --c-text-secondary: #4B6A9B;
+    --c-text-tertiary: #697C9A;
+    --c-text-warn: #F74646;
+    --c-text-secondary-hover: #222731;
+    --c-text-secondary-inactive: #4B6A9B;
+}
+
+.theme-dark {
+    --c-bg: #141D2F;
+    --c-primary: #0079FF;
+    --c-onPrimary: #FFFFFF;
+    --c-container: #1E2A47;
+    --c-text-primary: #FFFFFF;
+    --c-text-secondary: #FFFFFF;
+    --c-text-tertiary: #FFFFFF;
+    --c-text-warn: #F74646;
+    --c-text-secondary-hover: #90A4D4;
+    --c-text-secondary-inactive: #FFFFFF;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* TYPOGRAPHY */
+.t-h1 {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 3.8rem;
+}
+
+.t-h2 {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 3.3rem;
+}
+
+.t-h3 {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+.t-h4 {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+.t-body {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
