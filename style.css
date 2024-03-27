@@ -148,4 +148,6 @@ h6 {
 
 .theme-toggler h4 {
     text-transform: uppercase;
+    font-weight: 700;
+    color: var(--c-text-secondary);
 }
