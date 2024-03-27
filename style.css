@@ -134,20 +134,66 @@ h6 {
     margin-top: 3rem;
 }
 
-.header {
+#header {
     margin-bottom: 3.6rem;
 }
 
-.header h1 {
+#header h1 {
     color: var(--c-text-primary);
 }
 
-.theme-toggler {
+#theme-toggler {
     gap: 1.6rem;
 }
 
-.theme-toggler h4 {
+#theme-toggler h4 {
     text-transform: uppercase;
     font-weight: 700;
     color: var(--c-text-secondary);
+}
+
+.card {
+    background-color: var(--c-container);
+    border-radius: 1.5rem;
+}
+
+.card--light {
+    box-shadow: 0 1.6rem 3rem -1rem rgba(70, 96, 187, 0.2);
+}
+
+.card--search {
+    padding: 0.7rem;
+}
+
+#search-form {
+    gap: 0.4rem;
+}
+
+#search-form img {
+    align-self: center;
+    margin-left: 0.9rem;
+}
+
+#search-form input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    align-self: center;
+    padding: 1rem;
+}
+
+#search-form input:focus {
+    outline: none;
+}
+
+.btn-primary {
+    background-color: var(--c-primary);
+    color: var(--c-onPrimary);
+    border: none;
+    padding: 1.2rem 1.6rem;
+    border-radius: 1rem;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: auto;
 }
