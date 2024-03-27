@@ -16,6 +16,7 @@ html {
 body {
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
+    background-color: var(--c-bg);
 }
 
 img,
@@ -110,4 +111,43 @@ h6 {
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 2.5rem;
+}
+
+/* FLEX UTILITIES */
+.flex {
+    display: flex;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+/* ELEMENT STYLES */
+
+.container {
+    width: 87.2%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.header {
+    margin-bottom: 3.6rem;
+}
+
+.header h1 {
+    color: var(--c-text-primary);
+}
+
+.theme-toggler {
+    gap: 1.6rem;
+}
+
+.theme-toggler h4 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--c-text-secondary);
 }
