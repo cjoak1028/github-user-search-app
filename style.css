@@ -128,25 +128,25 @@ h6 {
 
 /* ELEMENT STYLES */
 
-.container {
+.main-container {
     width: 87.2%;
     margin: auto;
     margin-top: 3rem;
 }
 
-#header {
+.header {
     margin-bottom: 3.6rem;
 }
 
-#header h1 {
+.header h1 {
     color: var(--c-text-primary);
 }
 
-#theme-toggler {
+.theme-toggler {
     gap: 1.6rem;
 }
 
-#theme-toggler h4 {
+.theme-toggler h4 {
     text-transform: uppercase;
     font-weight: 700;
     color: var(--c-text-secondary);
@@ -155,38 +155,37 @@ h6 {
 .card {
     background-color: var(--c-container);
     border-radius: 1.5rem;
-}
-
-.card--light {
     box-shadow: 0 1.6rem 3rem -1rem rgba(70, 96, 187, 0.2);
-}
-
-.card--search {
     padding: 0.7rem;
 }
 
-#search-form {
-    gap: 0.4rem;
+.card--dark {
+    box-shadow: none;
 }
 
-#search-form img {
+.user-search {
+    padding: 0.7rem;
+    margin-bottom: 1.6rem;
+}
+
+.search-form__icon {
     align-self: center;
     margin-left: 0.9rem;
 }
 
-#search-form input {
+.search-form__control {
     width: 100%;
     border: none;
     background-color: transparent;
     align-self: center;
-    padding: 1rem;
+    padding: 0.7rem;
 }
 
-#search-form input:focus {
+.search-form__control:focus {
     outline: none;
 }
 
-.btn-primary {
+.search-form__btn {
     background-color: var(--c-primary);
     color: var(--c-onPrimary);
     border: none;
@@ -196,4 +195,8 @@ h6 {
     font-weight: 700;
     font-size: 1.4rem;
     line-height: auto;
+}
+
+.user-info {
+    padding: 3.2rem 2.4rem;
 }

@@ -18,24 +18,24 @@
 </head>
 
 <body class="theme-light">
-  <div class="container">
-    <div id="header" class="flex ai-c jc-sb">
+  <div class="main-container">
+    <div class=" header flex ai-c jc-sb">
       <h1 class="t-h1">
         devfinder
       </h1>
-      <div id="theme-toggler" class="flex">
+      <div class="theme-toggler flex">
         <h4 class="t-h4">Dark</h4>
         <img src="./assets/icon-moon.svg" alt="dark mode icon" />
       </div>
     </div>
-    <div class="card card--search card--light">
-      <form id="search-form" class="flex">
-        <img src="./assets/icon-search.svg" alt="search icon" />
-        <input type="search" placeholder="Search Github username..." class="t-h4">
-        <button type="submit" class="btn-primary">Search</button>
+    <div class="user-search card">
+      <form class="flex" class="search-form">
+        <img src="./assets/icon-search.svg" alt="search icon" class="search-form__icon" />
+        <input type="search" placeholder="Search Github username..." class="search-form__control t-h4">
+        <button type="submit" class="search-form__btn">Search</button>
       </form>
     </div>
-    <div>
+    <div class="user-info card">
 
     </div>
   </div>
