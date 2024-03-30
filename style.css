@@ -132,6 +132,10 @@ h6 {
     align-items: center;
 }
 
+.flex--jc-c {
+    justify-content: center;
+}
+
 .flex--jc-sb {
     justify-content: space-between;
 }
@@ -208,11 +212,11 @@ h6 {
     padding: 3.2rem 2.4rem;
 }
 
-.profile {
+.profile-info {
     margin-bottom: 3.3rem;
 }
 
-.profile__image {
+.profile-info__image {
     width: 7rem;
     height: 7rem;
     background-color: gray;
@@ -220,7 +224,7 @@ h6 {
     margin-right: 2rem;
 }
 
-.profile__handle {
+.profile-info__handle {
     color: var(--c-primary);
     margin-bottom: .6rem;
 }
@@ -228,4 +232,15 @@ h6 {
 .profile-bio {
     line-height: 2.5rem;
     margin-bottom: 2.3rem;
+}
+
+.profile-stats {
+    padding: 1.8rem 1.4rem;
+    background-color: var(--c-bg);
+    border-radius: 1rem;
+}
+
+.profile-stat {
+    flex: 1;
+    gap: 0.8rem;
 }
