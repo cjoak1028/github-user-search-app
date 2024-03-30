@@ -19,8 +19,8 @@
 
 <body class="theme-light">
   <div class="main-container">
-    <div class=" header flex ai-c jc-sb">
-      <h1 class="t-h1">
+    <div class=" header flex flex--ai-c flex--jc-sb">
+      <h1 class="logo">
         devfinder
       </h1>
       <div class="theme-toggler flex">
@@ -28,15 +28,23 @@
         <img src="./assets/icon-moon.svg" alt="dark mode icon" />
       </div>
     </div>
-    <div class="user-search card">
+    <div class="user-search-card card elevate">
       <form class="flex" class="search-form">
         <img src="./assets/icon-search.svg" alt="search icon" class="search-form__icon" />
-        <input type="search" placeholder="Search Github username..." class="search-form__control t-h4">
+        <input type="search" placeholder="Search Github username..." class="search-form__control t-body">
         <button type="submit" class="search-form__btn">Search</button>
       </form>
     </div>
-    <div class="user-info card">
-
+    <div class="user-info-card card elevate">
+      <div class="profile flex flex--ai-c">
+        <!-- TODO: Replace with img -->
+        <div class="profile__image"></div>
+        <div class="flex flex--col profile__text">
+          <h1 class="t-h1">The Octocat</h1>
+          <h3 class="t-h3 profile__handle">@octocat</h3>
+          <p class="t-body">Joined 25 Jan 2011</p>
+        </div>
+      </div>
     </div>
   </div>
 

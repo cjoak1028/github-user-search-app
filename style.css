@@ -78,39 +78,41 @@ h6 {
 }
 
 /* TYPOGRAPHY */
-.t-h1 {
+.logo {
     font-family: "Space Mono", monospace;
     font-weight: 700;
     font-size: 2.6rem;
-    line-height: 3.8rem;
+}
+
+.t-h1 {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-size: 1.6rem;
+
 }
 
 .t-h2 {
     font-family: "Space Mono", monospace;
     font-weight: 700;
-    font-size: 2.2rem;
-    line-height: 3.3rem;
+    font-size: 1.6rem;
 }
 
 .t-h3 {
     font-family: "Space Mono", monospace;
     font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+    font-size: 1.3rem;
 }
 
 .t-h4 {
     font-family: "Space Mono", monospace;
     font-weight: 400;
-    font-size: 1.3rem;
-    line-height: 2rem;
+    font-size: 1.1rem;
 }
 
 .t-body {
     font-family: "Space Mono", monospace;
     font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 2.5rem;
+    font-size: 1.3rem;
 }
 
 /* FLEX UTILITIES */
@@ -118,16 +120,23 @@ h6 {
     display: flex;
 }
 
-.ai-c {
+.flex--col {
+    flex-direction: column;
+}
+
+.flex--ai-s {
+    align-items: start;
+}
+
+.flex--ai-c {
     align-items: center;
 }
 
-.jc-sb {
+.flex--jc-sb {
     justify-content: space-between;
 }
 
 /* ELEMENT STYLES */
-
 .main-container {
     width: 87.2%;
     margin: auto;
@@ -155,15 +164,13 @@ h6 {
 .card {
     background-color: var(--c-container);
     border-radius: 1.5rem;
+}
+
+.elevate {
     box-shadow: 0 1.6rem 3rem -1rem rgba(70, 96, 187, 0.2);
-    padding: 0.7rem;
 }
 
-.card--dark {
-    box-shadow: none;
-}
-
-.user-search {
+.user-search-card {
     padding: 0.7rem;
     margin-bottom: 1.6rem;
 }
@@ -197,6 +204,19 @@ h6 {
     line-height: auto;
 }
 
-.user-info {
+.user-info-card {
     padding: 3.2rem 2.4rem;
+}
+
+.profile__image {
+    width: 7rem;
+    height: 7rem;
+    background-color: gray;
+    border-radius: 100%;
+    margin-right: 2rem;
+}
+
+.profile__handle {
+    color: var(--c-primary);
+    margin-bottom: .6rem;
 }
