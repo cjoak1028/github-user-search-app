@@ -17,6 +17,7 @@ body {
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
     background-color: var(--c-bg);
+    font-family: "Space Mono", monospace;
 }
 
 img,
@@ -56,7 +57,7 @@ h6 {
     --c-text-tertiary: #697C9A;
     --c-text-warn: #F74646;
     --c-text-secondary-hover: #222731;
-    --c-text-secondary-inactive: #4B6A9B;
+    --c-text-secondary-inactive: #A4B4CD;
 }
 
 .theme-dark {
@@ -69,7 +70,7 @@ h6 {
     --c-text-tertiary: #FFFFFF;
     --c-text-warn: #F74646;
     --c-text-secondary-hover: #90A4D4;
-    --c-text-secondary-inactive: #FFFFFF;
+    --c-text-secondary-inactive: #8E94A3;
 }
 
 #root,
@@ -78,39 +79,35 @@ h6 {
 }
 
 /* TYPOGRAPHY */
-.t-h1 {
-    font-family: "Space Mono", monospace;
+.logo {
     font-weight: 700;
     font-size: 2.6rem;
-    line-height: 3.8rem;
+}
+
+.t-h1 {
+    font-weight: 700;
+    font-size: 1.6rem;
+
 }
 
 .t-h2 {
-    font-family: "Space Mono", monospace;
     font-weight: 700;
-    font-size: 2.2rem;
-    line-height: 3.3rem;
+    font-size: 1.6rem;
 }
 
 .t-h3 {
-    font-family: "Space Mono", monospace;
     font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+    font-size: 1.3rem;
 }
 
 .t-h4 {
-    font-family: "Space Mono", monospace;
     font-weight: 400;
-    font-size: 1.3rem;
-    line-height: 2rem;
+    font-size: 1.1rem;
 }
 
 .t-body {
-    font-family: "Space Mono", monospace;
     font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 2.5rem;
+    font-size: 1.3rem;
 }
 
 /* FLEX UTILITIES */
@@ -118,16 +115,27 @@ h6 {
     display: flex;
 }
 
-.ai-c {
+.flex--col {
+    flex-direction: column;
+}
+
+.flex--ai-s {
+    align-items: start;
+}
+
+.flex--ai-c {
     align-items: center;
 }
 
-.jc-sb {
+.flex--jc-c {
+    justify-content: center;
+}
+
+.flex--jc-sb {
     justify-content: space-between;
 }
 
 /* ELEMENT STYLES */
-
 .main-container {
     width: 87.2%;
     margin: auto;
@@ -138,32 +146,27 @@ h6 {
     margin-bottom: 3.6rem;
 }
 
-.header h1 {
-    color: var(--c-text-primary);
-}
-
 .theme-toggler {
     gap: 1.6rem;
 }
 
-.theme-toggler h4 {
+.theme-toggler__label {
     text-transform: uppercase;
     font-weight: 700;
     color: var(--c-text-secondary);
+    font-size: 1.3rem;
 }
 
 .card {
     background-color: var(--c-container);
     border-radius: 1.5rem;
+}
+
+.card--elevated {
     box-shadow: 0 1.6rem 3rem -1rem rgba(70, 96, 187, 0.2);
-    padding: 0.7rem;
 }
 
-.card--dark {
-    box-shadow: none;
-}
-
-.user-search {
+.user-search-card {
     padding: 0.7rem;
     margin-bottom: 1.6rem;
 }
@@ -197,6 +200,77 @@ h6 {
     line-height: auto;
 }
 
-.user-info {
+.user-info-card {
     padding: 3.2rem 2.4rem;
+}
+
+.profile-info {
+    margin-bottom: 3.3rem;
+}
+
+.profile-info__image {
+    width: 7rem;
+    height: 7rem;
+    background-color: gray;
+    border-radius: 100%;
+    margin-right: 2rem;
+}
+
+.profile-info__name {
+    color: var(--c-text-primary);
+}
+
+.profile-info__handle {
+    color: var(--c-primary);
+    margin-bottom: .6rem;
+}
+
+.profile-info__date {
+    color: var(--c-text-tertiary);
+}
+
+.profile-bio {
+    line-height: 2.5rem;
+    margin-bottom: 2.3rem;
+    color: var(--c-text-secondary);
+}
+
+.profile-stats {
+    padding: 1.8rem 1.4rem;
+    background-color: var(--c-bg);
+    border-radius: 1rem;
+}
+
+.profile-stat {
+    flex: 1;
+    gap: 0.8rem;
+}
+
+.profile-stats {
+    margin-bottom: 2.4rem;
+}
+
+.profile-stat__title {
+    color: var(--c-text-secondary);
+}
+
+.profile-stat__value {
+    color: var(--c-text-primary);
+}
+
+.icon-wrapper {
+    width: 12%;
+}
+
+.info-grid {
+    display: grid;
+    grid-row-gap: 1.6rem;
+}
+
+.grid-item {
+    color: var(--c-text-secondary);
+}
+
+.grid-item--disabled {
+    color: var(--c-text-secondary-inactive)
 }

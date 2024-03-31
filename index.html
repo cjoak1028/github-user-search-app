@@ -19,24 +19,75 @@
 
 <body class="theme-light">
   <div class="main-container">
-    <div class=" header flex ai-c jc-sb">
-      <h1 class="t-h1">
+    <div class=" header flex flex--ai-c flex--jc-sb">
+      <h1 class="logo">
         devfinder
       </h1>
       <div class="theme-toggler flex">
-        <h4 class="t-h4">Dark</h4>
+        <h3 class="theme-toggler__label">Dark</h3>
         <img src="./assets/icon-moon.svg" alt="dark mode icon" />
       </div>
     </div>
-    <div class="user-search card">
+    <div class="user-search-card card elevate">
       <form class="flex" class="search-form">
         <img src="./assets/icon-search.svg" alt="search icon" class="search-form__icon" />
-        <input type="search" placeholder="Search Github username..." class="search-form__control t-h4">
+        <input type="search" placeholder="Search Github username..." class="search-form__control t-body">
         <button type="submit" class="search-form__btn">Search</button>
       </form>
     </div>
-    <div class="user-info card">
-
+    <div class="user-info-card card card--elevated">
+      <div class="profile-info flex flex--ai-c">
+        <!-- TODO: Replace with img -->
+        <div class="profile-info__image"></div>
+        <div class="profile-info__text flex flex--col">
+          <h1 class="profile-info__name t-h1">The Octocat</h1>
+          <h3 class="profile-info__handle t-h3">@octocat</h3>
+          <p class="profile-info__date t-body">Joined 25 Jan 2011</p>
+        </div>
+      </div>
+      <p class="profile-bio t-body">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+      </p>
+      <div class="profile-stats flex flex--jc-c">
+        <div class="profile-stat flex flex--col flex--ai-c">
+          <h4 class="profile-stat__title t-h4">Repos</h4>
+          <h2 class="profile-stat__value t-h2">8</h2>
+        </div>
+        <div class="profile-stat flex flex--col flex--ai-c">
+          <h4 class="profile-stat__title t-h4">Followers</h4>
+          <h2 class="profile-stat__value t-h2">3938</h2>
+        </div>
+        <div class="profile-stat flex flex--col flex--ai-c">
+          <h4 class="profile-stat__title t-h4">Following</h4>
+          <h2 class="profile-stat__value t-h2">9</h2>
+        </div>
+      </div>
+      <div class="info-grid">
+        <div class="grid-item flex">
+          <div class="icon-wrapper">
+            <img src="./assets/icon-location.svg" alt="location icon" />
+          </div>
+          <p class="t-body">San Francisco</p>
+        </div>
+        <div class="grid-item flex">
+          <div class="icon-wrapper">
+            <img src="./assets/icon-website.svg" alt="website icon" />
+          </div>
+          <p class="t-body">https://github.blog</p>
+        </div>
+        <div class="grid-item grid-item--disabled flex">
+          <div class="icon-wrapper">
+            <img src="./assets/icon-twitter-gray.svg" alt="twitter icon" />
+          </div>
+          <p class="t-body">Not Available</p>
+        </div>
+        <div class="grid-item flex">
+          <div class="icon-wrapper">
+            <img src="./assets/icon-company.svg" alt="company icon" />
+          </div>
+          <p class="t-body">@github</p>
+        </div>
+      </div>
     </div>
   </div>
 
