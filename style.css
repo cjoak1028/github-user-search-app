@@ -57,7 +57,7 @@ h6 {
     --c-text-tertiary: #697C9A;
     --c-text-warn: #F74646;
     --c-text-secondary-hover: #222731;
-    --c-text-secondary-inactive: #4B6A9B;
+    --c-text-secondary-inactive: #A4B4CD;
 }
 
 .theme-dark {
@@ -70,7 +70,7 @@ h6 {
     --c-text-tertiary: #FFFFFF;
     --c-text-warn: #F74646;
     --c-text-secondary-hover: #90A4D4;
-    --c-text-secondary-inactive: #FFFFFF;
+    --c-text-secondary-inactive: #8E94A3;
 }
 
 #root,
@@ -162,7 +162,7 @@ h6 {
     border-radius: 1.5rem;
 }
 
-.elevate {
+.card--elevated {
     box-shadow: 0 1.6rem 3rem -1rem rgba(70, 96, 187, 0.2);
 }
 
@@ -246,10 +246,31 @@ h6 {
     gap: 0.8rem;
 }
 
+.profile-stats {
+    margin-bottom: 2.4rem;
+}
+
 .profile-stat__title {
     color: var(--c-text-secondary);
 }
 
 .profile-stat__value {
     color: var(--c-text-primary);
+}
+
+.icon-wrapper {
+    width: 12%;
+}
+
+.info-grid {
+    display: grid;
+    grid-row-gap: 1.6rem;
+}
+
+.grid-item {
+    color: var(--c-text-secondary);
+}
+
+.grid-item--disabled {
+    color: var(--c-text-secondary-inactive)
 }
