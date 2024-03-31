@@ -283,19 +283,29 @@ h6 {
     padding: 1.8rem 1.4rem;
     background-color: var(--c-bg);
     border-radius: 1rem;
+    margin-bottom: 2.4rem;
+
+    @media screen and (width >=32em) {
+        padding: 1.8rem 3.2rem;
+    }
 }
 
 .profile-stat {
     flex: 1;
-    gap: 0.8rem;
-}
+    text-align: center;
 
-.profile-stats {
-    margin-bottom: 2.4rem;
+    @media screen and (width >=32em) {
+        text-align: left;
+    }
 }
 
 .profile-stat__title {
     color: var(--c-text-secondary);
+    margin-bottom: .8rem;
+
+    @media screen and (width >=32em) {
+        margin-bottom: .1rem;
+    }
 }
 
 .profile-stat__value {
