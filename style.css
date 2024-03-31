@@ -88,26 +88,45 @@ h6 {
     font-weight: 700;
     font-size: 1.6rem;
 
+    @media screen and (width >=32em) {
+        font-size: 2.6rem;
+    }
 }
 
 .t-h2 {
     font-weight: 700;
     font-size: 1.6rem;
+
+    @media screen and (width >=32em) {
+        font-size: 2.2rem;
+    }
 }
 
 .t-h3 {
     font-weight: 400;
     font-size: 1.3rem;
+
+    @media screen and (width >=32em) {
+        font-size: 1.6rem;
+    }
 }
 
 .t-h4 {
     font-weight: 400;
     font-size: 1.1rem;
+
+    @media screen and (width >=32em) {
+        font-size: 1.3rem;
+    }
 }
 
 .t-body {
     font-weight: 400;
     font-size: 1.3rem;
+
+    @media screen and (width >=32em) {
+        font-size: 1.5rem;
+    }
 }
 
 /* FLEX UTILITIES */
@@ -140,6 +159,11 @@ h6 {
     width: 87.2%;
     margin: auto;
     margin-top: 3rem;
+    max-width: 57.3rem;
+
+    @media screen and (width >=32em) {
+        margin-top: 14rem;
+    }
 }
 
 .header {
@@ -169,6 +193,10 @@ h6 {
 .user-search-card {
     padding: 0.7rem;
     margin-bottom: 1.6rem;
+
+    @media screen and (width >=32em) {
+        padding: 1rem;
+    }
 }
 
 .search-form__icon {
@@ -182,6 +210,13 @@ h6 {
     background-color: transparent;
     align-self: center;
     padding: 0.7rem;
+    font-size: 1.3rem;
+    color: var(--c-text-secondary-hover);
+
+    @media screen and (width >=32em) {
+        font-size: 1.8rem;
+        padding: 0.7rem 2.4rem;
+    }
 }
 
 .search-form__control:focus {
@@ -197,7 +232,10 @@ h6 {
     font-family: "Space Mono", monospace;
     font-weight: 700;
     font-size: 1.4rem;
-    line-height: auto;
+
+    @media screen and (width >=32em) {
+        font-size: 1.6rem;
+    }
 }
 
 .user-info-card {
@@ -205,7 +243,7 @@ h6 {
 }
 
 .profile-info {
-    margin-bottom: 3.3rem;
+    margin-bottom: 2.4rem;
 }
 
 .profile-info__image {
@@ -214,6 +252,12 @@ h6 {
     background-color: gray;
     border-radius: 100%;
     margin-right: 2rem;
+
+    @media screen and (width >=32em) {
+        width: 11.7rem;
+        height: 11.7rem;
+        margin-right: 4rem;
+    }
 }
 
 .profile-info__name {
@@ -231,7 +275,7 @@ h6 {
 
 .profile-bio {
     line-height: 2.5rem;
-    margin-bottom: 2.3rem;
+    margin-bottom: 2.4rem;
     color: var(--c-text-secondary);
 }
 
@@ -239,19 +283,29 @@ h6 {
     padding: 1.8rem 1.4rem;
     background-color: var(--c-bg);
     border-radius: 1rem;
+    margin-bottom: 2.4rem;
+
+    @media screen and (width >=32em) {
+        padding: 1.8rem 3.2rem;
+    }
 }
 
 .profile-stat {
     flex: 1;
-    gap: 0.8rem;
-}
+    text-align: center;
 
-.profile-stats {
-    margin-bottom: 2.4rem;
+    @media screen and (width >=32em) {
+        text-align: left;
+    }
 }
 
 .profile-stat__title {
     color: var(--c-text-secondary);
+    margin-bottom: .8rem;
+
+    @media screen and (width >=32em) {
+        margin-bottom: .1rem;
+    }
 }
 
 .profile-stat__value {
@@ -259,12 +313,22 @@ h6 {
 }
 
 .icon-wrapper {
-    width: 12%;
+    width: 3.3rem;
 }
 
 .info-grid {
     display: grid;
     grid-row-gap: 1.6rem;
+
+    @media screen and (width >=37.5em) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 2rem;
+
+        .item2 {
+            grid-row: 2;
+            grid-column: 1;
+        }
+    }
 }
 
 .grid-item {
