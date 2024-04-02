@@ -25,7 +25,7 @@
       </h1>
       <div class="theme-toggler flex">
         <h3 class="theme-toggler__label">Dark</h3>
-        <img src="./assets/icon-moon.svg" alt="dark mode icon" />
+        <img class="theme-toggler__icon" src="./assets/icon-moon.svg" alt="dark mode icon" />
       </div>
     </div>
     <div class="user-search-card card elevate">
@@ -97,6 +97,23 @@
     </div>
   </div>
 
+  <script>
+    const themeToggler = document.querySelector('.theme-toggler');
+
+    function toggleTheme() {
+      const label = this.querySelector('.theme-toggler__label');
+      const icon = this.querySelector('.theme-toggler__icon');
+      const body = document.body;
+
+      body.classList.toggle('theme-light');
+      body.classList.toggle('theme-dark');
+
+      label.innerHTML = body.classList.contains('theme-light') ? 'Dark' : 'Light';
+      icon.setAttribute('src', body.classList.contains('theme-light') ? './assets/icon-moon.svg' : './assets/icon-sun.svg');
+    }
+
+    themeToggler.addEventListener('click', toggleTheme);
+  </script>
 </body>
 
 </html>
