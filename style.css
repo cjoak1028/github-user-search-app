@@ -164,6 +164,10 @@ h6 {
     @media screen and (width >=32em) {
         margin-top: 14rem;
     }
+
+    @media screen and (width >=48em) {
+        max-width: 73rem;
+    }
 }
 
 .header {
@@ -240,6 +244,14 @@ h6 {
 
 .user-info-card {
     padding: 3.2rem 2.4rem;
+
+    @media screen and (width >=32em) {
+        padding: 4rem;
+    }
+
+    @media screen and (width >=48em) {
+        padding: 4.8rem;
+    }
 }
 
 .profile-info {
@@ -257,6 +269,10 @@ h6 {
         width: 11.7rem;
         height: 11.7rem;
         margin-right: 4rem;
+    }
+
+    @media screen and (width >=48em) {
+        display: none;
     }
 }
 
