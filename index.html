@@ -28,14 +28,14 @@
         <img class="theme-toggler__icon" src="./assets/icon-moon.svg" alt="dark mode icon" />
       </div>
     </div>
-    <div class="user-search-card card elevate">
+    <div class="user-search-card card">
       <form class="flex" class="search-form">
         <img src="./assets/icon-search.svg" alt="search icon" class="search-form__icon" />
         <input type="search" placeholder="Search Github username..." class="search-form__control t-body">
         <button type="submit" class="search-form__btn">Search</button>
       </form>
     </div>
-    <div class="user-info-card card card--elevated">
+    <div class="user-info-card card">
       <!-- TODO: Replace with img -->
 
       <div class="desktop-profile-image"></div>
@@ -70,25 +70,25 @@
         <div class="info-grid">
           <div class="grid-item flex">
             <div class="icon-wrapper">
-              <img src="./assets/icon-location.svg" alt="location icon" />
+              <img class="icon" src="./assets/icon-location.svg" alt="location icon" />
             </div>
             <p class="t-body">San Francisco</p>
           </div>
           <div class="grid-item item2 flex">
             <div class="icon-wrapper">
-              <img src="./assets/icon-website.svg" alt="website icon" />
+              <img class="icon" src="./assets/icon-website.svg" alt="website icon" />
             </div>
             <p class="t-body">https://github.blog</p>
           </div>
-          <div class="grid-item grid-item--disabled flex">
+          <div class="grid-item flex">
             <div class="icon-wrapper">
-              <img src="./assets/icon-twitter-gray.svg" alt="twitter icon" />
+              <img class="icon" src="./assets/icon-twitter.svg" alt="twitter icon" />
             </div>
             <p class="t-body">Not Available</p>
           </div>
           <div class="grid-item flex">
             <div class="icon-wrapper">
-              <img src="./assets/icon-company.svg" alt="company icon" />
+              <img class="icon" src="./assets/icon-company.svg" alt="company icon" />
             </div>
             <p class="t-body">@github</p>
           </div>
@@ -97,23 +97,7 @@
     </div>
   </div>
 
-  <script>
-    const themeToggler = document.querySelector('.theme-toggler');
-
-    function toggleTheme() {
-      const label = this.querySelector('.theme-toggler__label');
-      const icon = this.querySelector('.theme-toggler__icon');
-      const body = document.body;
-
-      body.classList.toggle('theme-light');
-      body.classList.toggle('theme-dark');
-
-      label.innerHTML = body.classList.contains('theme-light') ? 'Dark' : 'Light';
-      icon.setAttribute('src', body.classList.contains('theme-light') ? './assets/icon-moon.svg' : './assets/icon-sun.svg');
-    }
-
-    themeToggler.addEventListener('click', toggleTheme);
-  </script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
