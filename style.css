@@ -174,12 +174,12 @@ h6 {
 /* ELEMENT STYLES */
 .main-container {
     width: 87.2%;
-    margin: auto;
-    margin-top: 3rem;
     max-width: 73rem;
+    margin: auto;
+    padding: 3rem 0;
 
     @media screen and (width >=32em) {
-        margin-top: 14rem;
+        padding: 14rem 0;
     }
 
     @media screen and (width >=40em) {
