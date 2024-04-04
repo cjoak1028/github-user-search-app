@@ -404,3 +404,16 @@ h6 {
 /* .disabled {
     opacity: 50%;
 } */
+
+.link {
+    text-decoration: none;
+    color: var(--c-text-secondary)
+}
+
+.link:visited {
+    color: var(--c-text-secondary);
+}
+
+.link:hover {
+    text-decoration: underline;
+}
