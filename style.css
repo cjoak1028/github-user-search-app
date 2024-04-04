@@ -191,10 +191,11 @@ h6 {
 .card {
     background-color: var(--c-container);
     border-radius: 1.5rem;
+    box-shadow: 0 1.6rem 3rem -1rem rgba(70, 96, 187, 0.2);
 }
 
-.card--elevated {
-    box-shadow: 0 1.6rem 3rem -1rem rgba(70, 96, 187, 0.2);
+.theme-dark .card {
+    box-shadow: none;
 }
 
 .user-search-card {
