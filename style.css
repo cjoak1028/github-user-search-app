@@ -73,7 +73,6 @@ h6 {
     --c-text-secondary: #FFFFFF;
     --c-text-tertiary: #FFFFFF;
     --c-text-warn: #F74646;
-
 }
 
 #root,
@@ -222,6 +221,10 @@ h6 {
     #moon-icon {
         display: block;
     }
+
+    .grid-item__icon path {
+        fill: #4B6A9B;
+    }
 }
 
 .dark-theme {
@@ -235,6 +238,10 @@ h6 {
 
     .card {
         box-shadow: none;
+    }
+
+    .grid-item__icon path {
+        fill: #FFFFFF;
     }
 }
 
@@ -397,10 +404,6 @@ h6 {
     color: var(--c-text-primary);
 }
 
-.icon-wrapper {
-    width: 3.3rem;
-}
-
 .info-grid {
     display: grid;
     grid-row-gap: 1.6rem;
@@ -419,6 +422,11 @@ h6 {
 
 .grid-item {
     color: var(--c-text-secondary);
+    gap: 1.2rem;
+}
+
+.grid-item__icon {
+    flex-shrink: 0;
 }
 
 .link {
