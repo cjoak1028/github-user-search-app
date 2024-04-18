@@ -53,7 +53,7 @@ h6 {
 }
 
 /* COLOR SCHEMES */
-.theme-light {
+.light-theme {
     --c-bg: #F6F8FF;
     --c-primary: #0079FF;
     --c-onPrimary: #FFFFFF;
@@ -64,7 +64,7 @@ h6 {
     --c-text-warn: #F74646;
 }
 
-.theme-dark {
+.dark-theme {
     --c-bg: #141D2F;
     --c-primary: #0079FF;
     --c-onPrimary: #FFFFFF;
@@ -146,7 +146,7 @@ h6 {
     }
 }
 
-/* FLEX UTILITIES */
+/* UTILITIES */
 .flex {
     display: flex;
 }
@@ -169,6 +169,10 @@ h6 {
 
 .flex--jc-sb {
     justify-content: space-between;
+}
+
+.hidden {
+    display: none;
 }
 
 /* ELEMENT STYLES */
@@ -204,18 +208,34 @@ h6 {
     font-size: 1.3rem;
 }
 
-.theme-toggler:hover {
-    opacity: 100%;
-}
-
 .card {
     background-color: var(--c-container);
     border-radius: 1.5rem;
     box-shadow: 0 1.6rem 3rem -1rem rgba(70, 96, 187, 0.2);
 }
 
-.theme-dark .card {
-    box-shadow: none;
+.light-theme {
+    #sun-icon {
+        display: none;
+    }
+
+    #moon-icon {
+        display: block;
+    }
+}
+
+.dark-theme {
+    #sun-icon {
+        display: block;
+    }
+
+    #moon-icon {
+        display: none;
+    }
+
+    .card {
+        box-shadow: none;
+    }
 }
 
 .user-search-card {
@@ -227,9 +247,9 @@ h6 {
     }
 }
 
-.search-form__icon {
-    align-self: center;
+#search-icon {
     margin-left: 0.9rem;
+    flex-shrink: 0;
 }
 
 .search-form__control {
@@ -400,10 +420,6 @@ h6 {
 .grid-item {
     color: var(--c-text-secondary);
 }
-
-/* .disabled {
-    opacity: 50%;
-} */
 
 .link {
     text-decoration: none;
