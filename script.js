@@ -1,9 +1,9 @@
-const themeToggler = document.querySelector('.theme-toggler');
+const themeToggler = document.getElementById('theme-toggler');
 
 // Function that updates styles of elements when theme is toggled
 function toggleTheme() {
-    const togglerLabel = this.querySelector('#theme-label');
     const body = document.body;
+    const togglerLabel = document.getElementById('theme-label');
 
     // Toggle theme class
     body.classList.toggle('light-theme');
