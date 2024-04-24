@@ -13,4 +13,17 @@ function toggleTheme() {
     togglerLabel.textContent = body.classList.contains('light-theme') ? 'Dark' : 'Light';
 }
 
+// Fetches user based on username and updates DOM
+async function fetchUser(username) {
+    try {
+        const response = await fetch(`https://api.github.com/users/${username}`);
+        const user = await response.json();
+        console.log(user);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
 themeToggler.addEventListener('click', toggleTheme);
+
+fetchUser('octocat');
