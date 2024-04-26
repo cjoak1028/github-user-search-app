@@ -335,7 +335,7 @@ h6 {
     display: none;
     width: 11.7rem;
     height: 11.7rem;
-    background-color: gray;
+    background-color: var(--c-bg);
     border-radius: 100%;
     flex-shrink: 0;
     overflow: hidden;
@@ -348,7 +348,7 @@ h6 {
 .profile-info__image {
     width: 7rem;
     height: 7rem;
-    background-color: gray;
+    background-color: var(--c-bg);
     border-radius: 100%;
     margin-right: 2rem;
     flex-shrink: 0;
@@ -436,6 +436,7 @@ h6 {
 .grid-item {
     color: var(--c-text-secondary);
     gap: 1.2rem;
+    word-break: break-word;
 }
 
 .grid-item__icon {
