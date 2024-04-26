@@ -3,6 +3,7 @@ const togglerLabel = document.getElementById('theme-label');
 
 const userNameEl = document.getElementById('user-name');
 const userLoginEl = document.getElementById('user-login');
+const userDateJoinedEl = document.getElementById('user-date-joined')
 const userBioEl = document.getElementById('user-bio');
 const reposCountEl = document.getElementById('repos-count');
 const followersCountEl = document.getElementById('followers-count');
@@ -31,11 +32,12 @@ function toggleTheme() {
 function renderUserInfo(user) {
     renderUserDetails(user);
     renderUserSocialLinks(user);
+    console.log(user);
 }
 
 // Extract and render user details
 function renderUserDetails(user) {
-    const { name, login, bio, avatar_url, location, company } = user;
+    const { name, login, created_at, bio, avatar_url, location, company } = user;
 
     userNameEl.innerText = name || login;
     userLoginEl.innerText = login;
@@ -43,8 +45,27 @@ function renderUserDetails(user) {
     for (let image of profileImageList) {
         image.setAttribute('src', avatar_url);
     }
+    renderUserDateJoined(created_at)
     renderUserLocation(location);
     renderUserCompany(company);
+}
+
+function renderUserDateJoined(dateJoined) {
+    const formattedDate = formatDate(dateJoined);
+    userDateJoinedEl.innerText = formattedDate;
+
+}
+
+function formatDate(dateString) {
+    const months = [
+        'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+    ];
+
+    const [year, month, day] = dateString.split('T')[0].split('-');
+    const monthAbbreviation = months[parseInt(month, 10) - 1];
+
+    return `${parseInt(day, 10)} ${monthAbbreviation} ${year}`;
 }
 
 // Extract and render social links
@@ -104,4 +125,4 @@ async function fetchUser(username) {
 
 themeToggler.addEventListener('click', toggleTheme);
 
-fetchUser('hello');
+fetchUser('cjoak1028');
