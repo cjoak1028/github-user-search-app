@@ -18,6 +18,11 @@ const searchInputEl = document.getElementById('search-input');
 const searchWarningEl = document.getElementById('search-warning');
 const searchButton = document.getElementById('search-button');
 
+function init() {
+    fetchUserAndRender('octocat');
+    themeToggler.addEventListener('click', toggleTheme);
+}
+
 // Function that updates styles of elements when theme is toggled
 function toggleTheme() {
     // Toggle theme class
@@ -37,7 +42,12 @@ async function submitForm(e) {
         return;
     }
 
-    const user = await fetchUser(searchInputValue);
+    fetchUserAndRender(searchInputValue);
+}
+
+// Fetches user and renders info
+async function fetchUserAndRender(username) {
+    const user = await fetchUser(username);
 
     if (user) {
         searchWarningEl.classList.add('hidden');
@@ -150,4 +160,4 @@ function renderUserBlog(blog) {
     }
 }
 
-themeToggler.addEventListener('click', toggleTheme);
+init();
