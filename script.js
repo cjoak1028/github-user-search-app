@@ -14,6 +14,10 @@ const userTwitterEl = document.getElementById('user-twitter');
 const userCompanyEl = document.getElementById('user-company');
 const profileImageList = document.getElementsByClassName('profile-image');
 
+const searchInputEl = document.getElementById('search-input');
+const searchWarningEl = document.getElementById('search-warning');
+const searchButton = document.getElementById('search-button');
+
 // Function that updates styles of elements when theme is toggled
 function toggleTheme() {
     // Toggle theme class
@@ -24,12 +28,33 @@ function toggleTheme() {
     togglerLabel.textContent = document.body.classList.contains('light-theme') ? 'Dark' : 'Light';
 }
 
-// Fetches user based on username and updates DOM
+// Handles search when username is submitted
+async function submitForm(e) {
+    e.preventDefault();
+    const searchInputValue = searchInputEl.value.trim();
+
+    if (searchInputValue === "") {
+        return;
+    }
+
+    const user = await fetchUser(searchInputValue);
+
+    if (user) {
+        searchWarningEl.classList.add('hidden');
+        renderUserInfo(user);
+    } else {
+        searchWarningEl.classList.remove('hidden');
+    }
+}
+
+// Fetches user based on username
 async function fetchUser(username) {
     try {
         const response = await fetch(`https://api.github.com/users/${username}`);
         const user = await response.json();
-        renderUserInfo(user);
+        if (response.ok) {
+            return user;
+        }
     } catch (error) {
         console.error(error);
     }
@@ -126,5 +151,3 @@ function renderUserBlog(blog) {
 }
 
 themeToggler.addEventListener('click', toggleTheme);
-
-fetchUser('stripe');
