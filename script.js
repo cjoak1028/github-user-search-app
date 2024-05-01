@@ -74,36 +74,55 @@ async function fetchUser(username) {
 function renderUserInfo(user) {
     renderUserDetails(user);
     renderUserLinks(user);
-    console.log(user);
 }
 
 // Extract and render user details
 function renderUserDetails(user) {
     const { name, login, created_at, bio, avatar_url } = user;
 
-    userNameEl.innerText = name || login;
-    userLoginEl.innerText = login;
-    userBioEl.innerText = bio || "This profile has no bio";
-    for (let image of profileImageList) {
-        image.setAttribute('src', avatar_url);
-    }
+    renderProfileImages(avatar_url);
+    renderUserName(name, login);
+    renderUserLogin(login);
+    renderUserBio(bio);
     renderUserDateJoined(created_at)
 }
 
+// Renders user name or login when name is unavailable
+function renderUserName(name, login) {
+    userNameEl.innerText = name || login;
+}
+
+// Renders user login
+function renderUserLogin(login) {
+    userLoginEl.innerText = login;
+}
+
+// Renders user bio
+function renderUserBio(bio) {
+    userBioEl.innerText = bio ? bio : "This profile has no bio";
+    userBioEl.classList.toggle("disabled", !bio);
+}
+
+function renderProfileImages(image_url) {
+    for (let image of profileImageList) {
+        image.setAttribute('src', image_url);
+    }
+}
+
 // Render user date joined
-function renderUserDateJoined(dateJoined) {
-    const formattedDate = formatDate(dateJoined);
+function renderUserDateJoined(date_joined) {
+    const formattedDate = formatDate(date_joined);
     userDateJoinedEl.innerText = formattedDate;
 }
 
 // Converts date format
-function formatDate(dateString) {
+function formatDate(date_str) {
     const months = [
         'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
         'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
     ];
 
-    const [year, month, day] = dateString.split('T')[0].split('-');
+    const [year, month, day] = date_str.split('T')[0].split('-');
     const monthAbbreviation = months[parseInt(month, 10) - 1];
 
     return `${parseInt(day, 10)} ${monthAbbreviation} ${year}`;
@@ -121,8 +140,8 @@ function renderUserLinks(user) {
 
 // Render user location
 function renderUserLocation(location) {
-    userLocationEl.innerText = location ? location.split(',')[0] : "Not Available";
-    location ? userLocationEl.parentElement.classList.remove('not-available') : userLocationEl.parentElement.classList.add('not-available');
+    userLocationEl.innerText = location?.split(',')[0] ?? "Not Available";
+    userLocationEl.parentElement.classList.toggle('disabled', !location);
 }
 
 // Render user company
@@ -130,34 +149,21 @@ function renderUserCompany(company) {
     const formattedCompany = company ? `https://github.com/${company.substr(1)}` : "";
     userCompanyEl.setAttribute('href', formattedCompany);
     userCompanyEl.innerText = company || "Not Available";
-
-    company ? userCompanyEl.parentElement.classList.remove('not-available') : userCompanyEl.parentElement.classList.add('not-available');
+    userCompanyEl.parentElement.classList.toggle('disabled', !company);
 }
 
 // Render user twitter
 function renderUserTwitter(username) {
-    if (username) {
-        userTwitterEl.setAttribute('href', `https://twitter.com/${username}`);
-        userTwitterEl.innerText = username;
-        userTwitterEl.parentElement.classList.remove('not-available');
-    } else {
-        userTwitterEl.setAttribute('href', "");
-        userTwitterEl.innerText = "Not Available";
-        userTwitterEl.parentElement.classList.add('not-available');
-    }
+    userTwitterEl.setAttribute('href', username ? `https://twitter.com/${username}` : "");
+    userTwitterEl.innerText = username || "Not Available";
+    userTwitterEl.parentElement.classList.toggle('disabled', !username);
 }
 
 // Render user blog
 function renderUserBlog(blog) {
-    if (blog) {
-        userBlogEl.setAttribute('href', `https://${blog}`);
-        userBlogEl.innerText = blog;
-        userBlogEl.parentElement.classList.remove('not-available');
-    } else {
-        userBlogEl.setAttribute('href', "");
-        userBlogEl.innerText = "Not Available";
-        userBlogEl.parentElement.classList.add('not-available');
-    }
+    userBlogEl.setAttribute('href', blog ? `https://${blog}` : "");
+    userBlogEl.innerText = blog || "Not Available";
+    userBlogEl.parentElement.classList.toggle('disabled', !blog);
 }
 
 init();

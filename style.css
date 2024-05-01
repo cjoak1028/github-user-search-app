@@ -174,16 +174,15 @@ h6 {
     display: none;
 }
 
-.not-available {
+.disabled {
+    opacity: 50%;
+}
+
+a.disabled {
     opacity: 50%;
     pointer-events: none;
     cursor: default;
 }
-
-/* .link-disabled {
-    pointer-events: none;
-    cursor: default;
-} */
 
 /* ELEMENT STYLES */
 .main-container {
