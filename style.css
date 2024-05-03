@@ -52,8 +52,7 @@ h6 {
     appearance: none;
 }
 
-/* COLOR SCHEMES */
-.light-theme {
+:root {
     --c-bg: #F6F8FF;
     --c-primary: #0079FF;
     --c-onPrimary: #FFFFFF;
@@ -64,7 +63,19 @@ h6 {
     --c-text-warn: #F74646;
 }
 
-.dark-theme {
+[data-theme="light"] {
+    --c-bg: #F6F8FF;
+    --c-primary: #0079FF;
+    --c-onPrimary: #FFFFFF;
+    --c-container: #FEFEFE;
+    --c-text-primary: #2B3442;
+    --c-text-secondary: #4B6A9B;
+    --c-text-tertiary: #697C9A;
+    --c-text-warn: #F74646;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
     --c-bg: #141D2F;
     --c-primary: #0079FF;
     --c-onPrimary: #FFFFFF;
@@ -73,6 +84,22 @@ h6 {
     --c-text-secondary: #FFFFFF;
     --c-text-tertiary: #FFFFFF;
     --c-text-warn: #F74646;
+
+    #sun-icon {
+        display: block;
+    }
+
+    #moon-icon {
+        display: none;
+    }
+
+    .card {
+        box-shadow: none;
+    }
+
+    .grid-item__icon path {
+        fill: #FFFFFF;
+    }
 }
 
 #root,
@@ -217,42 +244,18 @@ a.disabled {
     font-size: 1.3rem;
 }
 
+#sun-icon {
+    display: none;
+}
+
+#moon-icon {
+    display: block;
+}
+
 .card {
     background-color: var(--c-container);
     border-radius: 1.5rem;
     box-shadow: 0 1.6rem 3rem -1rem rgba(70, 96, 187, 0.2);
-}
-
-.light-theme {
-    #sun-icon {
-        display: none;
-    }
-
-    #moon-icon {
-        display: block;
-    }
-
-    .grid-item__icon path {
-        fill: #4B6A9B;
-    }
-}
-
-.dark-theme {
-    #sun-icon {
-        display: block;
-    }
-
-    #moon-icon {
-        display: none;
-    }
-
-    .card {
-        box-shadow: none;
-    }
-
-    .grid-item__icon path {
-        fill: #FFFFFF;
-    }
 }
 
 .user-search-card {
@@ -440,6 +443,10 @@ a.disabled {
 
 .grid-item__icon {
     flex-shrink: 0;
+
+    path {
+        fill: #4B6A9B;
+    }
 }
 
 .link {

@@ -20,17 +20,50 @@ const searchButton = document.getElementById('search-button');
 
 function init() {
     fetchUserAndRender('octocat');
-    themeToggler.addEventListener('click', toggleTheme);
+    themeToggler.addEventListener('click', switchTheme);
+    detectColorScheme();
+}
+
+//Determines if the user has a set theme
+function detectColorScheme() {
+    var theme = "light";    //default to light
+
+    //local storage is used to override OS theme settings
+    if (localStorage.getItem("theme")) {
+        if (localStorage.getItem("theme") == "dark") {
+            var theme = "dark";
+        }
+    } else if (!window.matchMedia) {
+        //matchMedia method not supported
+        return false;
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        //OS theme setting detected as dark
+        var theme = "dark";
+    }
+
+    //set body with data-theme attribute
+    if (theme == "dark") {
+        document.body.setAttribute("data-theme", "dark");
+        togglerLabel.innerText = "Light";
+
+    } else {
+        document.body.setAttribute("data-theme", "light");
+        togglerLabel.innerText = "Dark";
+    }
 }
 
 // Function that updates styles of elements when theme is toggled
-function toggleTheme() {
-    // Toggle theme class
-    document.body.classList.toggle('light-theme');
-    document.body.classList.toggle('dark-theme');
-
-    // Change theme toggler button based on selected theme
-    togglerLabel.textContent = document.body.classList.contains('light-theme') ? 'Dark' : 'Light';
+function switchTheme() {
+    let currentTheme = document.body.dataset.theme;
+    if (currentTheme === "dark") {
+        localStorage.setItem('theme', 'light');
+        document.body.setAttribute("data-theme", "light");
+        togglerLabel.innerText = "Dark";
+    } else {
+        localStorage.setItem('theme', 'dark');
+        document.body.setAttribute("data-theme", "dark");
+        togglerLabel.innerText = "Light";
+    }
 }
 
 // Handles search when username is submitted
