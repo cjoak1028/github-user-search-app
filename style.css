@@ -329,6 +329,10 @@ a.disabled {
     }
 }
 
+.profile-details {
+    flex: 1;
+}
+
 .profile-info {
     margin-bottom: 2.4rem;
 }
@@ -344,6 +348,17 @@ a.disabled {
 
     @media screen and (width >=56em) {
         display: block;
+    }
+}
+
+.profile-info__text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media screen and (width >=56em) {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
@@ -369,15 +384,26 @@ a.disabled {
 
 .profile-info__name {
     color: var(--c-text-primary);
+    word-break: break-word;
 }
 
 .profile-info__handle {
     color: var(--c-primary);
     margin-bottom: .6rem;
+    word-break: break-word;
+
+    @media screen and (width >=56em) {
+        margin-bottom: 0rem;
+    }
 }
 
 .profile-info__date {
     color: var(--c-text-tertiary);
+    flex-shrink: 0;
+
+    @media screen and (width >=56em) {
+        margin-top: 1rem;
+    }
 }
 
 .profile-bio {
