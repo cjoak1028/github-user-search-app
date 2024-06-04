@@ -205,8 +205,7 @@ h6 {
     opacity: 50%;
 }
 
-a.disabled {
-    opacity: 50%;
+.disabled a {
     pointer-events: none;
     cursor: default;
 }
