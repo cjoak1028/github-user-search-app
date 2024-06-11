@@ -1,4 +1,4 @@
-# GitHub user search app
+# GitHub User Search App
 
 A web application that lets users search Github profiles by username 
 
