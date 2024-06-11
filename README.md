@@ -38,7 +38,7 @@ A web application that lets users search Github profiles by username
 
 ### What I learned
 
-This is my first time coming across the prefers-color-scheme feature. If it hadn't been for FrontEnd Mentor ❤️, I wouldn't have known of its existence. Although I didn't use it for this project, it seems trendy at the moment to have web and mobile apps set to their device's default themes, so I'll most likely be using it in the foreseeable future.
+This is my first time coming across the prefers-color-scheme feature. Although I didn't use it for this project, it seems standard to have web and mobile apps set to their device's default themes, so I'll most likely be using it in the foreseeable future.
 
 ### Useful resources
 
