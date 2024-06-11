@@ -19,8 +19,8 @@ A web application that lets users search Github profiles by username
 
 ### Screenshot
 
-![](./screenshots/Screenshot%202024-06-03%20at%208.56.43%20PM.png)
 ![](./screenshots/Screenshot%202024-06-03%20at%208.56.04%20PM.png)
+![](./screenshots/Screenshot%202024-06-03%20at%208.56.43%20PM.png)
 
 ### Links
 
