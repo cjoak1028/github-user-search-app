@@ -1,11 +1,10 @@
 # GitHub User Search App
 
-A web application that lets users search Github profiles by username 
+A web application that allows users to search Github profiles by username. 
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
